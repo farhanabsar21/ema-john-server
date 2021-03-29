@@ -72,6 +72,13 @@ app.get("/", (req, res)=>{
     res.send("hello ema watson!");
 })
 
-app.listen(port, () => {
+// amar local e run korar jnno
+// app.listen(port, () => {
+//   console.log("node is running");
+// })
+
+// heroku te run korar jnno alternate port set korte hobe
+// process.env.PORT 
+app.listen(process.env.PORT || port, () => {
   console.log("node is running");
 })
